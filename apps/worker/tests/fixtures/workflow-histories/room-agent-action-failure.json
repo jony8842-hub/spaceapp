@@ -1,0 +1,353 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2066-10-14T02:12:30.292Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "roomAgentActionWorkflow"
+        },
+        "taskQueue": {
+          "name": "space-real-workflows",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJicmlkZ2UiOnsicm9vbUlkIjoicm9vbS10ZXN0LTEiLCJtaXNzaW9uSWQiOiJtaXNzaW9uLXRlc3QtMSIsImFnZW50UGFuZUlkIjoicGFuZS10ZXN0LTEiLCJhZ2VudFNlc3Npb25JZCI6InNlc3Npb24tdGVzdC0xIiwic2VsZWN0ZWRUb29sSWRzIjpbXSwiYWN0aW9ucyI6W3sidG9vbElkIjoicm9vbTppbnNwZWN0IiwiYWN0aW9uIjp7InR5cGUiOiJpbnNwZWN0In19XX0sInRyYWNlSWQiOiJ0cmFjZS1hY3Rpb24tMSJ9"
+            }
+          ]
+        },
+        "workflowExecutionTimeout": "315360000s",
+        "workflowRunTimeout": "315360000s",
+        "workflowTaskTimeout": "10s",
+        "originalExecutionRunId": "2c7b1779-e643-49bf-9308-604636c58af9",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "firstExecutionRunId": "2c7b1779-e643-49bf-9308-604636c58af9",
+        "attempt": 1,
+        "firstWorkflowTaskBackoff": "0s",
+        "header": {}
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2066-10-14T02:12:30.292Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "space-real-workflows",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2066-10-14T02:12:30.333Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "historySizeBytes": "527"
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2066-10-14T02:12:34.092Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            2,
+            1,
+            3
+          ],
+          "sdkName": "temporal-typescript",
+          "sdkVersion": "1.24.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2066-10-14T02:12:34.092Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "runRoomAgentBackgroundAction"
+        },
+        "taskQueue": {
+          "name": "space-real-workflows",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJicmlkZ2UiOnsicm9vbUlkIjoicm9vbS10ZXN0LTEiLCJtaXNzaW9uSWQiOiJtaXNzaW9uLXRlc3QtMSIsImFnZW50UGFuZUlkIjoicGFuZS10ZXN0LTEiLCJhZ2VudFNlc3Npb25JZCI6InNlc3Npb24tdGVzdC0xIiwic2VsZWN0ZWRUb29sSWRzIjpbXSwiYWN0aW9ucyI6W3sidG9vbElkIjoicm9vbTppbnNwZWN0IiwiYWN0aW9uIjp7InR5cGUiOiJpbnNwZWN0In19XX0sInRyYWNlSWQiOiJ0cmFjZS1hY3Rpb24tMSJ9"
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "315360000s",
+        "scheduleToStartTimeout": "315360000s",
+        "startToCloseTimeout": "86400s",
+        "heartbeatTimeout": "15s",
+        "workflowTaskCompletedEventId": "3",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 5
+        }
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2066-10-14T02:12:34.092Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2066-10-14T02:12:34.133Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_FAILED",
+      "activityTaskFailedEventAttributes": {
+        "failure": {
+          "message": "transport failed",
+          "source": "TypeScriptSDK",
+          "stackTrace": "ApplicationFailure: transport failed\n    at ApplicationFailure.nonRetryable (C:\\Users\\jony\\Documents\\Codex\\2026-10-23\\new-chat\\work\\projects\\spaceapp\\node_modules\\.pnpm\\@temporalio+common@1.24.0\\node_modules\\@temporalio\\common\\lib\\failure.js:209:16)\n    at runRoomAgentBackgroundAction (C:/Users/jony/Documents/Codex/2026-10-23/new-chat/work/projects/spaceapp/apps/worker/tests/temporal-workflows.test.ts:87:57)",
+          "applicationFailureInfo": {
+            "type": "ROOM_ACTION_TRANSPORT_FAILED",
+            "nonRetryable": true
+          }
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2066-10-14T02:12:34.133Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "space-real-workflows",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2066-10-14T02:12:34.134Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "historySizeBytes": "1783"
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2066-10-14T02:12:34.172Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2066-10-14T02:12:34.172Z",
+      "eventType": "EVENT_TYPE_MARKER_RECORDED",
+      "markerRecordedEventAttributes": {
+        "markerName": "core_patch",
+        "details": {
+          "patch-data": {
+            "payloads": [
+              {
+                "metadata": {
+                  "encoding": "anNvbi9wbGFpbg=="
+                },
+                "data": "eyJpZCI6InJvb20tYmFja2dyb3VuZC1hY3Rpb24tZmFpbHVyZS12MSIsImRlcHJlY2F0ZWQiOmZhbHNlfQ=="
+              }
+            ]
+          }
+        },
+        "workflowTaskCompletedEventId": "9"
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2066-10-14T02:12:34.172Z",
+      "eventType": "EVENT_TYPE_UPSERT_WORKFLOW_SEARCH_ATTRIBUTES",
+      "upsertWorkflowSearchAttributesEventAttributes": {
+        "workflowTaskCompletedEventId": "9",
+        "searchAttributes": {
+          "indexedFields": {
+            "TemporalChangeVersion": {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg==",
+                "type": "S2V5d29yZExpc3Q="
+              },
+              "data": "WyJyb29tLWJhY2tncm91bmQtYWN0aW9uLWZhaWx1cmUtdjEiXQ=="
+            }
+          }
+        }
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2066-10-14T02:12:34.172Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "failRoomAgentBackgroundAction"
+        },
+        "taskQueue": {
+          "name": "space-real-workflows",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJyb29tSWQiOiJyb29tLXRlc3QtMSIsIm1pc3Npb25JZCI6Im1pc3Npb24tdGVzdC0xIiwiYWN0aW9uSWQiOiJyZWFsLWZhaWx1cmUtMSIsImNhbmNlbGxlZCI6ZmFsc2V9"
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "315360000s",
+        "scheduleToStartTimeout": "315360000s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "9",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 5
+        }
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2066-10-14T02:12:34.172Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "13",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2066-10-14T02:12:34.179Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "YmluYXJ5L251bGw="
+              }
+            }
+          ]
+        },
+        "scheduledEventId": "13",
+        "startedEventId": "14",
+        "identity": "9232@DESKTOP-H2N5LOV"
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2066-10-14T02:12:34.179Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "space-real-workflows",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2066-10-14T02:12:34.180Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "16",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "historySizeBytes": "2672"
+      }
+    },
+    {
+      "eventId": "18",
+      "eventTime": "2066-10-14T02:12:34.202Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "16",
+        "identity": "9232@DESKTOP-H2N5LOV",
+        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "19",
+      "eventTime": "2066-10-14T02:12:34.202Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_FAILED",
+      "workflowExecutionFailedEventAttributes": {
+        "failure": {
+          "message": "Activity task failed",
+          "cause": {
+            "message": "transport failed",
+            "source": "TypeScriptSDK",
+            "stackTrace": "ApplicationFailure: transport failed\n    at ApplicationFailure.nonRetryable (C:\\Users\\jony\\Documents\\Codex\\2026-10-23\\new-chat\\work\\projects\\spaceapp\\node_modules\\.pnpm\\@temporalio+common@1.24.0\\node_modules\\@temporalio\\common\\lib\\failure.js:209:16)\n    at runRoomAgentBackgroundAction (C:/Users/jony/Documents/Codex/2026-10-23/new-chat/work/projects/spaceapp/apps/worker/tests/temporal-workflows.test.ts:87:57)",
+            "applicationFailureInfo": {
+              "type": "ROOM_ACTION_TRANSPORT_FAILED",
+              "nonRetryable": true
+            }
+          },
+          "activityFailureInfo": {
+            "scheduledEventId": "5",
+            "startedEventId": "6",
+            "identity": "9232@DESKTOP-H2N5LOV",
+            "activityType": {
+              "name": "runRoomAgentBackgroundAction"
+            },
+            "activityId": "1",
+            "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+          }
+        },
+        "workflowTaskCompletedEventId": "17"
+      }
+    }
+  ]
+}
