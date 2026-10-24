@@ -3,7 +3,6 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { TestWorkflowEnvironment } from "@temporalio/testing";
-import { historyToJSON } from "@temporalio/common/lib/proto-utils";
 import { Worker, bundleWorkflowCode, type WorkflowBundle } from "@temporalio/worker";
 import { ApplicationFailure } from "@temporalio/workflow";
 import {
@@ -13,6 +12,7 @@ import {
   ROOM_AGENT_STOP_SIGNAL
 } from "@space/contracts";
 import { MEMORY_MAINTENANCE_TASK_QUEUE } from "../src/memory-maintenance-config.js";
+import { sanitizeTemporalHistory } from "./support/sanitize-temporal-history.js";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
 const mainTaskQueue = "space-real-workflows";
@@ -138,7 +138,7 @@ async function recordHistory(name: string, workflowId: string) {
   if (!recordFixtures) return;
   const history = await environment.client.workflow.getHandle(workflowId).fetchHistory();
   await fs.mkdir(fixtureRoot, { recursive: true });
-  await fs.writeFile(path.join(fixtureRoot, `${name}.json`), `${historyToJSON(history)}\n`, "utf8");
+  await fs.writeFile(path.join(fixtureRoot, `${name}.json`), sanitizeTemporalHistory(history), "utf8");
 }
 
 beforeAll(async () => {
