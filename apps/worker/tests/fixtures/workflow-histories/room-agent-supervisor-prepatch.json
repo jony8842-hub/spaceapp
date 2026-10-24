@@ -2,7 +2,7 @@
   "events": [
     {
       "eventId": "1",
-      "eventTime": "2026-10-24T02:13:58.439Z",
+      "eventTime": "2026-10-24T02:52:53.472Z",
       "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
       "workflowExecutionStartedEventAttributes": {
         "workflowType": {
@@ -25,9 +25,9 @@
         "workflowExecutionTimeout": "315360000s",
         "workflowRunTimeout": "315360000s",
         "workflowTaskTimeout": "10s",
-        "originalExecutionRunId": "b6455c3f-1c36-4560-827b-2a569cdc7adf",
-        "identity": "8344@DESKTOP-H2N5LOV",
-        "firstExecutionRunId": "b6455c3f-1c36-4560-827b-2a569cdc7adf",
+        "originalExecutionRunId": "bf37d026-234e-47b9-a8f7-d764d9d8d667",
+        "identity": "identity:fixture",
+        "firstExecutionRunId": "bf37d026-234e-47b9-a8f7-d764d9d8d667",
         "attempt": 1,
         "firstWorkflowTaskBackoff": "0s",
         "header": {}
@@ -35,7 +35,7 @@
     },
     {
       "eventId": "2",
-      "eventTime": "2026-10-24T02:13:58.439Z",
+      "eventTime": "2026-10-24T02:52:53.472Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -48,22 +48,42 @@
     },
     {
       "eventId": "3",
-      "eventTime": "2026-10-24T02:13:58.475Z",
+      "eventTime": "2026-10-24T02:52:53.473Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "2",
-        "identity": "8344@DESKTOP-H2N5LOV",
+        "identity": "identity:fixture",
         "historySizeBytes": "411"
       }
     },
     {
       "eventId": "4",
-      "eventTime": "2026-10-24T02:13:58.859Z",
+      "eventTime": "2026-10-24T02:52:54.015Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+c4aba720e2fc65568324b0f9341d40d84f16bf69f42022b15990250fd4c363f3",
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            3,
+            1,
+            2
+          ],
+          "sdkName": "temporal-typescript",
+          "sdkVersion": "1.24.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2026-10-24T02:52:54.097Z",
       "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_TERMINATED",
       "workflowExecutionTerminatedEventAttributes": {
         "reason": "fixture complete",
         "details": {},
-        "identity": "8344@DESKTOP-H2N5LOV"
+        "identity": "identity:fixture"
       }
     }
   ]

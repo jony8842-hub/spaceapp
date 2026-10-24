@@ -2,7 +2,7 @@
   "events": [
     {
       "eventId": "1",
-      "eventTime": "2056-10-16T02:12:22.920Z",
+      "eventTime": "2056-10-16T02:54:55.518Z",
       "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
       "workflowExecutionStartedEventAttributes": {
         "workflowType": {
@@ -25,9 +25,9 @@
         "workflowExecutionTimeout": "315360000s",
         "workflowRunTimeout": "315360000s",
         "workflowTaskTimeout": "10s",
-        "originalExecutionRunId": "6c59c846-2da1-454b-86a7-4b8c1c3eb682",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "firstExecutionRunId": "6c59c846-2da1-454b-86a7-4b8c1c3eb682",
+        "originalExecutionRunId": "3da7f7c6-afbd-497f-8cc0-25a0d82d1e41",
+        "identity": "identity:fixture",
+        "firstExecutionRunId": "3da7f7c6-afbd-497f-8cc0-25a0d82d1e41",
         "attempt": 1,
         "firstWorkflowTaskBackoff": "0s",
         "header": {}
@@ -35,7 +35,7 @@
     },
     {
       "eventId": "2",
-      "eventTime": "2056-10-16T02:12:22.920Z",
+      "eventTime": "2056-10-16T02:54:55.518Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -48,27 +48,27 @@
     },
     {
       "eventId": "3",
-      "eventTime": "2056-10-16T02:12:22.940Z",
+      "eventTime": "2056-10-16T02:54:55.518Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "2",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "historySizeBytes": "355"
+        "identity": "identity:fixture",
+        "historySizeBytes": "356"
       }
     },
     {
       "eventId": "4",
-      "eventTime": "2056-10-16T02:12:25.627Z",
+      "eventTime": "2056-10-16T02:54:57.516Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
       "workflowTaskCompletedEventAttributes": {
         "scheduledEventId": "2",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+31bfb993235c5a0ab72d09c13910d93f0257b8b47833e90a5400b2cb388007b3",
         "sdkMetadata": {
           "coreUsedFlags": [
+            2,
             3,
-            1,
-            2
+            1
           ],
           "sdkName": "temporal-typescript",
           "sdkVersion": "1.24.0"
@@ -78,7 +78,7 @@
     },
     {
       "eventId": "5",
-      "eventTime": "2056-10-16T02:12:25.627Z",
+      "eventTime": "2056-10-16T02:54:57.516Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
       "activityTaskScheduledEventAttributes": {
         "activityId": "1",
@@ -115,17 +115,17 @@
     },
     {
       "eventId": "6",
-      "eventTime": "2056-10-16T02:12:25.627Z",
+      "eventTime": "2056-10-16T02:54:57.516Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
       "activityTaskStartedEventAttributes": {
         "scheduledEventId": "5",
-        "identity": "9232@DESKTOP-H2N5LOV",
+        "identity": "identity:fixture",
         "attempt": 1
       }
     },
     {
       "eventId": "7",
-      "eventTime": "2056-10-16T02:12:25.634Z",
+      "eventTime": "2056-10-16T02:54:57.527Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
       "activityTaskCompletedEventAttributes": {
         "result": {
@@ -140,12 +140,12 @@
         },
         "scheduledEventId": "5",
         "startedEventId": "6",
-        "identity": "9232@DESKTOP-H2N5LOV"
+        "identity": "identity:fixture"
       }
     },
     {
       "eventId": "8",
-      "eventTime": "2056-10-16T02:12:25.634Z",
+      "eventTime": "2056-10-16T02:54:57.527Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -158,29 +158,29 @@
     },
     {
       "eventId": "9",
-      "eventTime": "2056-10-16T02:12:25.634Z",
+      "eventTime": "2056-10-16T02:54:57.527Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "8",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "historySizeBytes": "1181"
+        "identity": "identity:fixture",
+        "historySizeBytes": "1186"
       }
     },
     {
       "eventId": "10",
-      "eventTime": "2056-10-16T02:12:25.650Z",
+      "eventTime": "2056-10-16T02:54:57.547Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
       "workflowTaskCompletedEventAttributes": {
         "scheduledEventId": "8",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+31bfb993235c5a0ab72d09c13910d93f0257b8b47833e90a5400b2cb388007b3",
         "sdkMetadata": {},
         "meteringMetadata": {}
       }
     },
     {
       "eventId": "11",
-      "eventTime": "2056-10-16T02:12:25.650Z",
+      "eventTime": "2056-10-16T02:54:57.547Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
       "activityTaskScheduledEventAttributes": {
         "activityId": "2",
@@ -217,17 +217,17 @@
     },
     {
       "eventId": "12",
-      "eventTime": "2056-10-16T02:12:25.650Z",
+      "eventTime": "2056-10-16T02:54:57.547Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
       "activityTaskStartedEventAttributes": {
         "scheduledEventId": "11",
-        "identity": "9232@DESKTOP-H2N5LOV",
+        "identity": "identity:fixture",
         "attempt": 1
       }
     },
     {
       "eventId": "13",
-      "eventTime": "2056-10-16T02:12:25.654Z",
+      "eventTime": "2056-10-16T02:54:57.551Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
       "activityTaskCompletedEventAttributes": {
         "result": {
@@ -242,12 +242,12 @@
         },
         "scheduledEventId": "11",
         "startedEventId": "12",
-        "identity": "9232@DESKTOP-H2N5LOV"
+        "identity": "identity:fixture"
       }
     },
     {
       "eventId": "14",
-      "eventTime": "2056-10-16T02:12:25.654Z",
+      "eventTime": "2056-10-16T02:54:57.551Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -260,29 +260,29 @@
     },
     {
       "eventId": "15",
-      "eventTime": "2056-10-16T02:12:25.655Z",
+      "eventTime": "2056-10-16T02:54:57.551Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "14",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "historySizeBytes": "1782"
+        "identity": "identity:fixture",
+        "historySizeBytes": "1791"
       }
     },
     {
       "eventId": "16",
-      "eventTime": "2056-10-16T02:12:25.663Z",
+      "eventTime": "2056-10-16T02:54:57.560Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
       "workflowTaskCompletedEventAttributes": {
         "scheduledEventId": "14",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+31bfb993235c5a0ab72d09c13910d93f0257b8b47833e90a5400b2cb388007b3",
         "sdkMetadata": {},
         "meteringMetadata": {}
       }
     },
     {
       "eventId": "17",
-      "eventTime": "2056-10-16T02:12:25.663Z",
+      "eventTime": "2056-10-16T02:54:57.560Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
       "activityTaskScheduledEventAttributes": {
         "activityId": "3",
@@ -310,17 +310,17 @@
     },
     {
       "eventId": "18",
-      "eventTime": "2056-10-16T02:12:25.663Z",
+      "eventTime": "2056-10-16T02:54:57.560Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
       "activityTaskStartedEventAttributes": {
         "scheduledEventId": "17",
-        "identity": "9232@DESKTOP-H2N5LOV",
+        "identity": "identity:fixture",
         "attempt": 1
       }
     },
     {
       "eventId": "19",
-      "eventTime": "2056-10-16T02:12:25.668Z",
+      "eventTime": "2056-10-16T02:54:57.565Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
       "activityTaskCompletedEventAttributes": {
         "result": {
@@ -335,12 +335,12 @@
         },
         "scheduledEventId": "17",
         "startedEventId": "18",
-        "identity": "9232@DESKTOP-H2N5LOV"
+        "identity": "identity:fixture"
       }
     },
     {
       "eventId": "20",
-      "eventTime": "2056-10-16T02:12:25.668Z",
+      "eventTime": "2056-10-16T02:54:57.565Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -353,29 +353,29 @@
     },
     {
       "eventId": "21",
-      "eventTime": "2056-10-16T02:12:25.668Z",
+      "eventTime": "2056-10-16T02:54:57.565Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "20",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "historySizeBytes": "2282"
+        "identity": "identity:fixture",
+        "historySizeBytes": "2295"
       }
     },
     {
       "eventId": "22",
-      "eventTime": "2056-10-16T02:12:25.678Z",
+      "eventTime": "2056-10-16T02:54:57.574Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
       "workflowTaskCompletedEventAttributes": {
         "scheduledEventId": "20",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+31bfb993235c5a0ab72d09c13910d93f0257b8b47833e90a5400b2cb388007b3",
         "sdkMetadata": {},
         "meteringMetadata": {}
       }
     },
     {
       "eventId": "23",
-      "eventTime": "2056-10-16T02:12:25.678Z",
+      "eventTime": "2056-10-16T02:54:57.574Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
       "activityTaskScheduledEventAttributes": {
         "activityId": "4",
@@ -412,17 +412,17 @@
     },
     {
       "eventId": "24",
-      "eventTime": "2056-10-16T02:12:25.678Z",
+      "eventTime": "2056-10-16T02:54:57.574Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
       "activityTaskStartedEventAttributes": {
         "scheduledEventId": "23",
-        "identity": "9232@DESKTOP-H2N5LOV",
+        "identity": "identity:fixture",
         "attempt": 1
       }
     },
     {
       "eventId": "25",
-      "eventTime": "2056-10-16T02:12:25.682Z",
+      "eventTime": "2056-10-16T02:54:57.578Z",
       "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
       "activityTaskCompletedEventAttributes": {
         "result": {
@@ -437,12 +437,12 @@
         },
         "scheduledEventId": "23",
         "startedEventId": "24",
-        "identity": "9232@DESKTOP-H2N5LOV"
+        "identity": "identity:fixture"
       }
     },
     {
       "eventId": "26",
-      "eventTime": "2056-10-16T02:12:25.682Z",
+      "eventTime": "2056-10-16T02:54:57.578Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -455,29 +455,29 @@
     },
     {
       "eventId": "27",
-      "eventTime": "2056-10-16T02:12:25.682Z",
+      "eventTime": "2056-10-16T02:54:57.579Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "26",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "historySizeBytes": "3574"
+        "identity": "identity:fixture",
+        "historySizeBytes": "3591"
       }
     },
     {
       "eventId": "28",
-      "eventTime": "2056-10-16T02:12:25.700Z",
+      "eventTime": "2056-10-16T02:54:57.596Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
       "workflowTaskCompletedEventAttributes": {
         "scheduledEventId": "26",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+31bfb993235c5a0ab72d09c13910d93f0257b8b47833e90a5400b2cb388007b3",
         "sdkMetadata": {},
         "meteringMetadata": {}
       }
     },
     {
       "eventId": "29",
-      "eventTime": "2056-10-16T02:12:25.700Z",
+      "eventTime": "2056-10-16T02:54:57.596Z",
       "eventType": "EVENT_TYPE_START_CHILD_WORKFLOW_EXECUTION_INITIATED",
       "startChildWorkflowExecutionInitiatedEventAttributes": {
         "namespace": "default",
@@ -509,14 +509,14 @@
     },
     {
       "eventId": "30",
-      "eventTime": "2056-10-16T02:12:25.701Z",
+      "eventTime": "2056-10-16T02:54:57.598Z",
       "eventType": "EVENT_TYPE_CHILD_WORKFLOW_EXECUTION_STARTED",
       "childWorkflowExecutionStartedEventAttributes": {
         "namespace": "default",
         "initiatedEventId": "29",
         "workflowExecution": {
           "workflowId": "memory-consolidation-1",
-          "runId": "94035d9f-63a6-42ee-abd1-e0791cd643fd"
+          "runId": "cc2ffbbe-07ea-4d61-907c-341af97d7a34"
         },
         "workflowType": {
           "name": "memoryConsolidationWorkflow"
@@ -525,7 +525,7 @@
     },
     {
       "eventId": "31",
-      "eventTime": "2056-10-16T02:12:25.701Z",
+      "eventTime": "2056-10-16T02:54:57.598Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -538,29 +538,29 @@
     },
     {
       "eventId": "32",
-      "eventTime": "2056-10-16T02:12:25.702Z",
+      "eventTime": "2056-10-16T02:54:57.598Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "31",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "historySizeBytes": "4152"
+        "identity": "identity:fixture",
+        "historySizeBytes": "4171"
       }
     },
     {
       "eventId": "33",
-      "eventTime": "2056-10-16T02:12:25.718Z",
+      "eventTime": "2056-10-16T02:54:57.616Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
       "workflowTaskCompletedEventAttributes": {
         "scheduledEventId": "31",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+31bfb993235c5a0ab72d09c13910d93f0257b8b47833e90a5400b2cb388007b3",
         "sdkMetadata": {},
         "meteringMetadata": {}
       }
     },
     {
       "eventId": "34",
-      "eventTime": "2056-10-16T02:12:28.349Z",
+      "eventTime": "2056-10-16T02:55:00.154Z",
       "eventType": "EVENT_TYPE_CHILD_WORKFLOW_EXECUTION_COMPLETED",
       "childWorkflowExecutionCompletedEventAttributes": {
         "result": {
@@ -576,7 +576,7 @@
         "namespace": "default",
         "workflowExecution": {
           "workflowId": "memory-consolidation-1",
-          "runId": "94035d9f-63a6-42ee-abd1-e0791cd643fd"
+          "runId": "cc2ffbbe-07ea-4d61-907c-341af97d7a34"
         },
         "workflowType": {
           "name": "memoryConsolidationWorkflow"
@@ -587,7 +587,7 @@
     },
     {
       "eventId": "35",
-      "eventTime": "2056-10-16T02:12:28.349Z",
+      "eventTime": "2056-10-16T02:55:00.154Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
       "workflowTaskScheduledEventAttributes": {
         "taskQueue": {
@@ -600,29 +600,29 @@
     },
     {
       "eventId": "36",
-      "eventTime": "2056-10-16T02:12:28.349Z",
+      "eventTime": "2056-10-16T02:55:00.154Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
       "workflowTaskStartedEventAttributes": {
         "scheduledEventId": "35",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "historySizeBytes": "5169"
+        "identity": "identity:fixture",
+        "historySizeBytes": "5188"
       }
     },
     {
       "eventId": "37",
-      "eventTime": "2056-10-16T02:12:28.396Z",
+      "eventTime": "2056-10-16T02:55:00.176Z",
       "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
       "workflowTaskCompletedEventAttributes": {
         "scheduledEventId": "35",
-        "identity": "9232@DESKTOP-H2N5LOV",
-        "binaryChecksum": "@temporalio/worker@1.24.0+03fb585a465662c45ba67ecf5a698717bee0fe8b297d640af4c8d0af52e0fcc8",
+        "identity": "identity:fixture",
+        "binaryChecksum": "@temporalio/worker@1.24.0+31bfb993235c5a0ab72d09c13910d93f0257b8b47833e90a5400b2cb388007b3",
         "sdkMetadata": {},
         "meteringMetadata": {}
       }
     },
     {
       "eventId": "38",
-      "eventTime": "2056-10-16T02:12:28.396Z",
+      "eventTime": "2056-10-16T02:55:00.176Z",
       "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
       "workflowExecutionCompletedEventAttributes": {
         "result": {
