@@ -21,6 +21,7 @@ type FixtureWorkflowHandle = {
   terminate: (reason?: string) => Promise<void>;
 };
 
+/** Poll a legacy workflow until its first task is recorded before termination. */
 async function waitForWorkflowTaskCompletion(handle: FixtureWorkflowHandle) {
   const deadline = Date.now() + 30_000;
   while (true) {
@@ -70,3 +71,4 @@ describe("legacy Temporal fixture recorder", () => {
     expect(history.events.some((event) => event.markerRecordedEventAttributes?.markerName === "core_patch")).toBe(false);
   }, 120_000);
 });
+

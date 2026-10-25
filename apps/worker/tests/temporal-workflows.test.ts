@@ -1,3 +1,4 @@
+
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -26,6 +27,7 @@ type ActivityState = { calls: ActivityCall[]; dotSteps: Array<Record<string, unk
 let environment: TestWorkflowEnvironment;
 let workflowBundle: WorkflowBundle;
 
+/** Build deterministic input shared by the production workflow scenarios. */
 function input(overrides: Record<string, unknown> = {}) {
   return {
     roomId: "room-test-1",
@@ -37,6 +39,7 @@ function input(overrides: Record<string, unknown> = {}) {
   };
 }
 
+/** Build a stable memory-audit result for activity stubs. */
 function memoryRun(overrides: Record<string, unknown> = {}) {
   return {
     id: "memory-run-1",
@@ -66,6 +69,7 @@ function memoryRun(overrides: Record<string, unknown> = {}) {
   };
 }
 
+/** Create the deterministic activity implementations used by the sandbox workers. */
 function activitySet(state: ActivityState, options: { actionFails?: boolean } = {}) {
   const record = (name: string, args: unknown[]) => state.calls.push({ name, args });
   return {
@@ -109,6 +113,7 @@ function activitySet(state: ActivityState, options: { actionFails?: boolean } = 
   };
 }
 
+/** Start one test worker per queue and return its coordinated shutdown callback. */
 async function startWorkers(state: ActivityState, queues = [mainTaskQueue], options: { actionFails?: boolean } = {}) {
   const activities = activitySet(state, options);
   const workers = await Promise.all(queues.map((taskQueue) => Worker.create({
@@ -125,6 +130,7 @@ async function startWorkers(state: ActivityState, queues = [mainTaskQueue], opti
   };
 }
 
+/** Wait until a named stub activity has been observed or fail with a bounded timeout. */
 async function waitForCall(state: ActivityState, name: string) {
   const deadline = Date.now() + 5_000;
   while (Date.now() < deadline) {
@@ -134,6 +140,7 @@ async function waitForCall(state: ActivityState, name: string) {
   throw new Error(`Timed out waiting for activity ${name}`);
 }
 
+/** Persist a sanitized history when fixture recording is explicitly enabled. */
 async function recordHistory(name: string, workflowId: string) {
   if (!recordFixtures) return;
   const history = await environment.client.workflow.getHandle(workflowId).fetchHistory();
@@ -287,3 +294,4 @@ describe("real Temporal workflow sandbox", () => {
     } finally { await stop(); }
   }, 120_000);
 });
+

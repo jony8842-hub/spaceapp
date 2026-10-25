@@ -1,3 +1,4 @@
+
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,6 +11,7 @@ const fixtureRoot = path.join(repoRoot, "apps/worker/tests/fixtures/workflow-his
 const workflowEntry = path.join(repoRoot, "apps/worker/tests/support/temporal-workflows.ts");
 const negativeWorkflowEntry = path.join(repoRoot, "apps/worker/tests/support/temporal-negative-workflows.ts");
 
+/** Build a replay bundle with the workspace contract alias used by the worker tests. */
 async function bundle(entry: string): Promise<WorkflowBundle> {
   return bundleWorkflowCode({
     workflowsPath: entry,
@@ -24,6 +26,7 @@ async function bundle(entry: string): Promise<WorkflowBundle> {
   });
 }
 
+/** Read one sanitized history fixture by its stable fixture name. */
 async function fixture(name: string): Promise<any> {
   return JSON.parse(await fs.readFile(path.join(fixtureRoot, `${name}.json`), "utf8"));
 }
@@ -67,3 +70,4 @@ describe("Temporal replay gate", () => {
     expect(String((thrown as Error)?.message)).toMatch(/determin|nondetermin/i);
   }, 180_000);
 });
+
